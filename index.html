@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Abdul Rehman Mohammad Rehan | Electrical Engineer</title>
+<meta name="description" content="Electrical engineer with 10+ years in site supervision, testing and commissioning of LV/MV substations, 132 kV cable works, cable networks and streetlighting across the UAE.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --ground:#FFFFFF;--surface:#FFFFFF;--alt:#F4F6F9;--ink:#0F1C2E;--ink-2:#4B5A6B;--rule:#DCE2E9;
+  --accent:#1F4FA3;--lamp:#E09A00;--red:#B3261E;--yellow:#C08F00;--blue:#1F4FA3;
+  --chip:#EDF1F6;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px);-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;font-size:1.125rem;line-height:1.6}
+a{color:var(--accent);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+h1,h2,h3,h4{font-family:"Barlow Condensed","Arial Narrow",sans-serif;line-height:1.05;margin:0;font-weight:700}
+p{margin:0 0 1rem}
+.wrap{max-width:76rem;margin:0 auto;padding:0 1.5rem}
+
+/* ---------- header ---------- */
+#header{position:fixed;top:0;left:0;right:0;z-index:1000;padding-top:env(safe-area-inset-top,0px);background:rgba(255,255,255,.85);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:background-color .3s,box-shadow .3s,border-color .3s}
+#header.scrolled{background:rgba(255,255,255,.97);border-bottom-color:var(--rule);box-shadow:0 10px 30px -20px rgba(15,28,46,.4)}
+.nav-bar{display:flex;align-items:center;justify-content:flex-end;max-width:1300px;margin:0 auto;padding:0 1.5rem;min-height:76px}
+.nav-list{display:flex;justify-content:flex-end}
+.brand{font-family:"Barlow",sans-serif;font-size:clamp(1.3rem,2.4vw,1.75rem);font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand span{color:var(--red)}
+.nav-list ul{list-style:none;margin:0;padding:0;position:fixed;top:0;left:100%;width:100vw;height:100vh;background:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;transition:left .5s ease;z-index:1}
+.nav-list ul.active{left:0}
+.nav-list ul a{position:relative;display:block;padding:.9rem 1.25rem;font-size:1.5rem;font-weight:600;letter-spacing:.16em;color:var(--ink);text-transform:uppercase;text-decoration:none;transition:color .25s}
+.nav-list ul a::after{content:attr(data-after);position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(0);color:rgba(15,28,46,.05);font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:7rem;letter-spacing:40px;z-index:-1;white-space:nowrap;pointer-events:none;transition:transform .3s,letter-spacing .3s}
+.nav-list ul li:hover a::after{transform:translate(-50%,-50%) scale(1);letter-spacing:normal}
+.nav-list ul li:hover a,.nav-list ul a.current{color:var(--red)}
+.hamburger{position:relative;z-index:100;width:52px;height:52px;border:3px solid var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;background:#fff;cursor:pointer}
+.hamburger::after{content:"";position:absolute;inset:-3px;border-radius:50%;border:3px solid var(--red);animation:hamburger_puls 1.2s ease infinite}
+.hamburger .bar{position:relative;width:24px;height:2.5px;background:var(--ink)}
+.hamburger .bar::before,.hamburger .bar::after{content:"";position:absolute;left:0;width:100%;height:100%;background:var(--ink);transition:top .3s,bottom .3s,transform .3s}
+.hamburger .bar::before{bottom:8px}.hamburger .bar::after{top:8px}
+.hamburger.active .bar{background:transparent}
+.hamburger.active .bar::before{bottom:0;transform:rotate(45deg)}
+.hamburger.active .bar::after{top:0;transform:rotate(-45deg)}
+@keyframes hamburger_puls{0%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.4)}}
+@media (min-width:1100px){
+  .hamburger{display:none}
+  .nav-bar{justify-content:flex-start}
+  .nav-list{flex:1;justify-content:flex-start}
+  .nav-list ul{position:static;width:100%;height:auto;background:transparent;flex-direction:row;justify-content:space-between;overflow:visible}
+  .nav-list ul a{font-size:.95rem;letter-spacing:.13em;padding:1.7rem .4rem}
+  .nav-list ul a::after{display:none}
+}
+.progress{position:absolute;left:0;bottom:-1px;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,#B3261E 0 33.3%,#E0A100 33.3% 66.6%,#1F4FA3 66.6%)}
+.phases{display:inline-flex;gap:3px}
+.phases i{display:block;width:5px;height:20px;border-radius:2px}
+.phases i:nth-child(1){background:#B3261E}.phases i:nth-child(2){background:#E0A100}.phases i:nth-child(3){background:#1F4FA3}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;min-height:100svh;background:#fff;color:var(--ink);overflow:hidden;display:flex;flex-direction:column}
+.hero svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.hero .copy{position:relative;z-index:2;padding-top:calc(76px + 12vh);padding-bottom:6rem}
+.hero h1{font-family:"Barlow",sans-serif;font-size:clamp(3rem,8vw,7rem);font-weight:800;letter-spacing:-.02em;line-height:1.02;margin:0}
+.hero h1 .line{position:relative;display:block;width:fit-content;color:transparent;overflow:hidden;animation:text_reveal .01s forwards}
+.hero h1 .line i{position:absolute;top:0;left:0;height:100%;width:0;background:var(--red);animation:text_reveal_box .9s cubic-bezier(.7,0,.3,1) forwards}
+.hero h1 .l1{animation-delay:.75s}.hero h1 .l1 i{animation-delay:.3s}
+.hero h1 .l2{animation-delay:1.55s}.hero h1 .l2 i{animation-delay:1.1s}
+.hero h1 .l3{animation-name:text_reveal_name;animation-delay:.85s}.hero h1 .l3 i{background:var(--ink);animation-delay:.4s}
+@keyframes text_reveal_box{0%{width:0;left:0}50%{width:100%;left:0}100%{width:0;left:100%}}
+@keyframes text_reveal{to{color:var(--ink)}}
+@keyframes text_reveal_name{to{color:var(--red)}}
+.hero .role{font-weight:700;font-size:clamp(1rem,1.9vw,1.35rem);letter-spacing:.22em;text-transform:uppercase;color:var(--ink);margin-top:2rem;opacity:0;animation:rise .8s 1.4s forwards}
+.hero .lede{font-size:clamp(1.15rem,2.1vw,1.45rem);line-height:1.5;color:var(--ink-2);max-width:32em;margin-top:1rem;opacity:0;animation:rise .9s 1.6s forwards}
+.rotor{display:inline-grid;vertical-align:bottom;color:var(--accent);font-weight:700}
+.rotor span{grid-area:1/1;opacity:0;transform:translateY(.4em);transition:opacity .5s,transform .5s}
+.rotor span.on{opacity:1;transform:none}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2.2rem;opacity:0;animation:rise .9s 1.8s forwards}
+.btn{font:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:.55rem;min-height:48px;padding:0 1.35rem;border-radius:999px;font-weight:600;text-decoration:none;border:1.5px solid transparent;transition:transform .2s,background .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.lamp{background:var(--ink);color:#fff;box-shadow:0 0 0 0 rgba(224,154,0,.6);animation:halo 2.8s 2.5s infinite}
+.btn.lamp:hover{background:var(--accent)}
+.btn.ghost{border-color:var(--ink);color:var(--ink);background:#fff}
+.btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn svg{width:18px;height:18px}
+@keyframes halo{0%{box-shadow:0 0 0 0 rgba(224,154,0,.6)}70%{box-shadow:0 0 0 16px rgba(224,154,0,0)}100%{box-shadow:0 0 0 0 rgba(224,154,0,0)}}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+
+
+/* lamps in scene */
+.scene .lampglow,.scene .pool,.scene .head,.scene .cone{opacity:0}
+.scene.lit .cone{animation:poolOn 1.4s forwards}
+.scene.lit .lampglow{animation:lampOn 1.1s forwards}
+.scene.lit .pool{animation:poolOn 1.4s forwards}
+.scene.lit .head{animation:headOn .9s forwards}
+@keyframes lampOn{0%{opacity:0}12%{opacity:.9}20%{opacity:.15}34%{opacity:.85}44%{opacity:.4}100%{opacity:1}}
+@keyframes poolOn{0%{opacity:0}40%{opacity:0}100%{opacity:1}}
+@keyframes headOn{0%{opacity:0}12%{opacity:1}20%{opacity:.3}34%{opacity:1}100%{opacity:1}}
+.scene .dash{animation:roadmove 1.2s linear infinite}
+@keyframes roadmove{to{stroke-dashoffset:-72}}
+
+/* cable divider */
+.cable{position:absolute;left:0;right:0;bottom:0;height:46px;z-index:3;background:#F4F6F9;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.cable svg{width:100%;height:100%;display:block}
+.cable .core{stroke-width:3;fill:none;opacity:.22}
+.cable .pulse{stroke-width:3;fill:none;stroke-dasharray:60 540;stroke-linecap:round;animation:flow 3s linear infinite}
+.cable .p2{animation-delay:-1s}.cable .p3{animation-delay:-2s}
+@keyframes flow{to{stroke-dashoffset:-600}}
+
+/* ---------- counters ---------- */
+.stats{background:var(--surface);border-bottom:1px solid var(--rule)}
+.stats .wrap{display:grid;grid-template-columns:repeat(6,minmax(0,1fr))}
+.stat{padding:2.2rem 1rem 2rem;border-right:1px solid var(--rule);text-align:center}
+.stat:last-child{border-right:0}
+.stat b{display:block;font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);line-height:1;font-variant-numeric:tabular-nums}
+.stat span{display:block;color:var(--ink-2);font-size:.98rem;margin-top:.45rem;line-height:1.3}
+@media (max-width:900px){.stats .wrap{grid-template-columns:repeat(3,minmax(0,1fr))}.stat:nth-child(3){border-right:0}.stat:nth-child(-n+3){border-bottom:1px solid var(--rule)}}
+@media (max-width:520px){.stats .wrap{grid-template-columns:repeat(2,minmax(0,1fr))}.stat{border-right:1px solid var(--rule)!important;border-bottom:1px solid var(--rule)}.stat:nth-child(2n){border-right:0!important}.stat:nth-last-child(-n+2){border-bottom:0}}
+
+/* ---------- sections ---------- */
+section.block{padding:6rem 0}
+.head-row{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.75rem;flex-wrap:wrap}
+.head-row h2{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;max-width:16ch}
+.head-row p{color:var(--ink-2);max-width:30em;margin:0}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- SLD ---------- */
+.sld-box{background:var(--surface);border:1px solid var(--rule);border-radius:16px;overflow-x:auto;padding:1.5rem;box-shadow:0 30px 60px -40px rgba(15,28,46,.35)}
+.sld{display:block;width:100%;min-width:760px;height:auto}
+.sld .c{stroke:var(--rule);stroke-width:2.5;fill:none}
+.sld .bus{stroke:var(--rule);stroke-width:6;fill:none;stroke-linecap:round}
+.sld .live{stroke:var(--accent);stroke-width:3;fill:none;stroke-dasharray:1;stroke-dashoffset:1}
+.sld .livebus{stroke:var(--accent);stroke-width:6.5;fill:none;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1}
+.sld .flow{stroke:var(--lamp);stroke-width:3;fill:none;stroke-dasharray:6 34;opacity:0}
+.sld.on .live,.sld.on .livebus{animation:energise .7s ease-out forwards}
+.sld.on .flow{animation:fadeIn .6s 3s forwards,flowDash 1.6s 3s linear infinite}
+.sld.on .d1{animation-delay:.1s}.sld.on .d2{animation-delay:.6s}.sld.on .d3{animation-delay:1.05s}.sld.on .d4{animation-delay:1.5s}.sld.on .d5{animation-delay:1.95s}.sld.on .d6{animation-delay:2.4s}
+@keyframes energise{to{stroke-dashoffset:0}}
+@keyframes fadeIn{to{opacity:.9}}
+@keyframes flowDash{to{stroke-dashoffset:-40}}
+.sld .tx{stroke:var(--ink);stroke-width:2.2;fill:var(--surface)}
+.sld .sym{stroke:var(--ink);stroke-width:2.2;fill:none}
+.sld .dot{fill:var(--ink)}
+.sld text{fill:var(--ink);font-family:"Barlow",sans-serif;font-size:14px}
+.sld text.kv{font-family:"Barlow Condensed",sans-serif;font-size:20px;font-weight:700}
+.sld text.sub{fill:var(--ink-2);font-size:13px}
+.sld a text.lnk{fill:var(--accent);font-weight:600;text-decoration:underline}
+.sld a:hover text.lnk{fill:var(--ink)}
+.sld .lampsym{transition:fill .4s}
+.sld.on .lampsym{animation:lampsym .5s 2.9s forwards}
+@keyframes lampsym{to{fill:var(--lamp)}}
+.note{color:var(--ink-2);font-size:1rem;margin-top:1rem}
+
+/* ---------- now / mafraq ---------- */
+.feature{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:3rem;align-items:center}
+.feature h3{font-size:clamp(1.9rem,3.2vw,2.6rem);margin-bottom:.5rem}
+.feature .who{color:var(--ink-2);margin-bottom:1.25rem}
+.tag{display:inline-block;background:var(--chip);color:var(--ink);font-size:.85rem;font-weight:600;padding:.25rem .7rem;border-radius:999px;margin:0 .35rem .35rem 0}
+.tag.live{background:transparent;border:1.5px solid var(--accent);color:var(--accent)}
+.tag.live::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:.45rem;vertical-align:1px;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+.qty{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:1.75rem}
+.qty h4{font-size:1.25rem;margin-bottom:1.25rem;color:var(--ink-2);font-weight:600}
+.bar{margin-bottom:1.35rem}
+.bar:last-child{margin-bottom:0}
+.bar .top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.45rem}
+.bar .top b{font-family:"Barlow Condensed",sans-serif;font-size:1.9rem;font-weight:800;line-height:1}
+.bar .track{height:12px;border-radius:999px;background:var(--chip);overflow:hidden}
+.bar .fill{height:100%;width:0;border-radius:999px;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.qty.in .fill{width:var(--w)}
+.fill.r{background:var(--red)}.fill.y{background:var(--yellow)}.fill.b{background:var(--blue)}
+.poles{display:flex;flex-wrap:wrap;gap:5px;margin-top:.7rem}
+.poles i{width:10px;height:10px;border-radius:50%;background:var(--chip);transition:background .3s,box-shadow .3s}
+.poles i.on{background:var(--lamp);box-shadow:0 0 8px var(--lamp)}
+
+/* ---------- timeline ---------- */
+.timeline{position:relative;padding-left:3rem}
+.timeline .rail{position:absolute;left:11px;top:6px;bottom:6px;width:3px;background:var(--rule);border-radius:3px}
+.timeline .rail i{position:absolute;inset:0;transform-origin:top;transform:scaleY(0);background:linear-gradient(var(--red),var(--yellow),var(--blue));border-radius:3px}
+.role{position:relative;padding-bottom:3.5rem}
+.role:last-child{padding-bottom:0}
+.role::before{content:"";position:absolute;left:calc(-3rem + 3px);top:.55rem;width:19px;height:19px;border-radius:50%;background:var(--ground);border:3px solid var(--rule);transition:border-color .4s,box-shadow .4s}
+.role.in::before{border-color:var(--accent);box-shadow:0 0 0 6px color-mix(in srgb,var(--accent) 18%,transparent)}
+.role .when{font-weight:600;color:var(--accent)}
+.role h3{font-size:clamp(1.7rem,3vw,2.3rem);margin:.2rem 0}
+.role .org{color:var(--ink-2);margin-bottom:1.25rem}
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:1rem}
+.group{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:1.25rem 1.35rem}
+.group h4{font-size:1.2rem;margin-bottom:.6rem}
+.group ul{margin:0;padding-left:1.1rem;font-size:1rem;color:var(--ink-2)}
+.group li{margin-bottom:.4rem}
+.group li::marker{color:var(--accent)}
+
+/* ---------- projects ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:2rem}
+.filters button{font:inherit;font-size:1rem;font-weight:600;min-height:44px;padding:0 1.1rem;border-radius:999px;border:1.5px solid var(--rule);background:var(--surface);color:var(--ink);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
+.filters button:hover{border-color:var(--accent)}
+.filters button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--ground)}
+.filters button span{opacity:.6;margin-left:.3rem;font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(21rem,1fr));gap:1.25rem}
+@media (max-width:480px){.grid{grid-template-columns:1fr}}
+.card{position:relative;background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:1.5rem;display:flex;flex-direction:column;transition:transform .35s,box-shadow .35s,border-color .35s,opacity .4s}
+.card:hover{transform:translateY(-4px);box-shadow:0 24px 50px -30px rgba(15,28,46,.45);border-color:var(--accent)}
+.card.hide{display:none}
+.card.flash{animation:flash 1.6s}
+@keyframes flash{0%,100%{box-shadow:none}30%{box-shadow:0 0 0 4px var(--lamp)}}
+.card .meta{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.9rem}
+.client{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.05rem;padding:.2rem .7rem;border-radius:6px;color:#fff}
+.c-ALDAR{background:#2E5E4E}.c-TAQA{background:#7A3E8F}.c-IMKAN{background:#A0522D}.c-DEWA{background:#1F6E8C}.c-MUSANADA{background:#8A6A12}.c-AADC{background:#2F4F9C}
+.card .dates{color:var(--ink-2);font-size:.92rem;text-align:right}
+.card h3{font-size:1.5rem;line-height:1.1;margin-bottom:.35rem}
+.card .loc{color:var(--ink-2);font-size:1rem;margin-bottom:.9rem}
+.figs{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1rem}
+.figs span{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.05rem;background:var(--chip);padding:.2rem .65rem;border-radius:6px}
+.side{font-size:.9rem;color:var(--ink-2);margin-top:auto;padding-top:.5rem}
+details{border-top:1px solid var(--rule);margin-top:.8rem;padding-top:.6rem}
+summary{cursor:pointer;font-weight:600;color:var(--accent);list-style:none;display:flex;align-items:center;gap:.4rem;min-height:40px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.3rem;line-height:1;transition:transform .3s}
+details[open] summary::after{transform:rotate(45deg)}
+details ul{margin:.4rem 0 0;padding-left:1.1rem;font-size:.98rem;color:var(--ink-2)}
+details[open] ul{animation:open .45s ease}
+details li{margin-bottom:.35rem}
+@keyframes open{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+
+/* ---------- certifications ---------- */
+.certs{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:2rem;align-items:start}
+.volt{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:1.75rem}
+.volt h3{font-size:1.5rem;margin-bottom:.3rem}
+.volt > p{color:var(--ink-2);font-size:1rem;margin-bottom:1.5rem}
+.vrow{display:grid;grid-template-columns:5.5rem minmax(0,1fr);gap:1rem;align-items:center;margin-bottom:1.4rem}
+.vrow:last-child{margin-bottom:0}
+.vrow .who{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:1.6rem}
+.vrow .what{font-size:.98rem;color:var(--ink-2);margin-bottom:.4rem}
+.vtrack{position:relative;height:30px;background:var(--chip);border-radius:8px;overflow:hidden}
+.vfill{position:absolute;inset:0 auto 0 0;width:0;border-radius:8px;display:flex;align-items:center;justify-content:flex-end;padding-right:.6rem;font-family:"Barlow Condensed",sans-serif;font-weight:800;color:#fff;font-size:1.1rem;transition:width 1.8s cubic-bezier(.2,.8,.2,1);white-space:nowrap;min-width:0}
+.volt.in .vfill{width:var(--w);min-width:4.2rem}
+.vfill.b{background:#1F4FA3}.vfill.r{background:#B3261E}.vfill.y{background:#8A6A12}
+.others{display:grid;gap:1rem}
+.cert{background:var(--surface);border:1px solid var(--rule);border-radius:14px;padding:1.2rem 1.35rem;display:flex;gap:1rem;align-items:flex-start}
+.cert .ic{flex:none;width:44px;height:44px;border-radius:10px;background:var(--chip);display:grid;place-items:center;color:var(--accent)}
+.cert .ic svg{width:22px;height:22px}
+.cert h4{font-size:1.25rem}
+.cert p{margin:.15rem 0 0;color:var(--ink-2);font-size:.98rem}
+
+/* ---------- skills ---------- */
+.skills{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.skill{background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:1.6rem}
+.skill h3{font-size:1.5rem;margin-bottom:1rem}
+.skill .tag{transition:transform .2s,background .2s}
+.skill .tag:hover{transform:translateY(-2px);background:color-mix(in srgb,var(--accent) 18%,var(--chip))}
+.edu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.25rem;margin-top:1.25rem}
+.edu .skill p{color:var(--ink-2);margin:0}
+.edu .skill h3{margin-bottom:.4rem}
+@media (max-width:900px){.feature,.certs{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.edu{grid-template-columns:1fr}}
+
+/* ---------- contact ---------- */
+.contact{position:relative;background:var(--alt);color:var(--ink);border-top:1px solid var(--rule);padding:7rem 0 5rem;overflow:hidden;text-align:center}
+.contact h2{font-size:clamp(2.6rem,7vw,5.5rem);font-weight:800;max-width:14ch;margin:0 auto}
+.contact p{color:var(--ink-2);max-width:34em;margin:1.4rem auto 0;font-size:1.2rem}
+.contact .cta{justify-content:center;opacity:1;animation:none}
+.contact .row{display:flex;justify-content:center;gap:clamp(1.5rem,6vw,5rem);margin-bottom:3rem}
+.contact .pole{width:4px;height:90px;background:var(--ink);position:relative;border-radius:2px}
+.contact .pole::before{content:"";position:absolute;top:0;left:0;width:22px;height:4px;background:var(--ink);border-radius:2px}
+.contact .pole::after{content:"";position:absolute;top:4px;left:14px;width:14px;height:6px;border-radius:0 0 8px 8px;background:#C3CDD9;transition:background .4s,box-shadow .4s}
+.contact.in .pole::after{background:#FFB300;box-shadow:0 0 18px 6px rgba(255,179,0,.6),0 34px 60px 14px rgba(255,179,0,.25)}
+.contact.in .pole:nth-child(1)::after{transition-delay:.1s}.contact.in .pole:nth-child(2)::after{transition-delay:.35s}.contact.in .pole:nth-child(3)::after{transition-delay:.6s}.contact.in .pole:nth-child(4)::after{transition-delay:.85s}.contact.in .pole:nth-child(5)::after{transition-delay:1.1s}
+.contact .mail{display:inline-block;margin-top:2rem;color:var(--accent);font-weight:600;font-size:1.15rem;overflow-wrap:anywhere;user-select:all;-webkit-user-select:all}
+footer{background:#fff;color:var(--ink-2);font-size:.95rem;border-top:1px solid var(--rule)}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1.5rem;padding-bottom:1.5rem}
+
+
+/* ---------- email dialog ---------- */
+dialog#mailbox{border:0;border-radius:20px;padding:1.75rem 1.75rem 2rem;width:min(34rem,calc(100vw - 2rem));color:var(--ink);background:#fff;box-shadow:0 40px 80px -30px rgba(15,28,46,.5)}
+dialog#mailbox::backdrop{background:rgba(15,28,46,.45);backdrop-filter:blur(3px)}
+dialog#mailbox[open]{animation:pop .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes pop{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+.mb-close-row{display:flex;justify-content:flex-end;margin:-.75rem -.75rem 0 0}
+.mb-x{font:inherit;font-size:1.8rem;line-height:1;width:44px;height:44px;border:0;background:none;color:var(--ink-2);cursor:pointer;border-radius:50%}
+.mb-x:hover{background:var(--chip);color:var(--ink)}
+#mailbox h2{font-size:2.2rem;font-weight:800;margin-bottom:.4rem}
+#mailbox > p{color:var(--ink-2)}
+.mb-label{display:block;font-weight:600;font-size:.95rem;margin-bottom:.4rem}
+.mb-field{display:flex;gap:.5rem}
+.mb-field input{flex:1;min-width:0;font:inherit;font-weight:600;font-size:1.05rem;padding:0 .9rem;min-height:48px;border:1.5px solid var(--rule);border-radius:12px;color:var(--ink);background:var(--alt)}
+.mb-field input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.mb-field .btn{animation:none}
+.mb-status{min-height:1.6em;margin:.5rem 0 1rem;font-weight:600;color:#1E7A46}
+.mb-actions{display:flex;flex-wrap:wrap;gap:.6rem}
+@media (max-width:480px){.mb-field{flex-direction:column}.mb-actions .btn{flex:1 1 100%;justify-content:center}}
+
+/* ---------- recognition ---------- */
+.recog{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.25rem}
+.rcard{position:relative;background:var(--surface);border:1px solid var(--rule);border-radius:16px;padding:2rem 1.75rem 1.75rem;overflow:hidden;transition:transform .35s,box-shadow .35s,border-color .35s}
+.rcard::before{content:"";position:absolute;left:0;top:0;height:5px;width:100%;background:var(--bar);transform:scaleX(0);transform-origin:left;transition:transform 1s cubic-bezier(.2,.8,.2,1) .2s}
+.rcard.in::before{transform:scaleX(1)}
+.rcard:hover{transform:translateY(-6px);box-shadow:0 26px 50px -30px rgba(15,28,46,.45);border-color:var(--bar)}
+.rcard .country{font-family:"Barlow Condensed",sans-serif;font-weight:800;font-size:2.4rem;line-height:1;margin-bottom:1.1rem}
+.rcard .body{display:flex;gap:.85rem;align-items:flex-start;padding:.9rem 0;border-top:1px solid var(--rule)}
+.rcard .body:last-child{padding-bottom:0}
+.rcard .tick{flex:none;width:30px;height:30px;border-radius:50%;background:var(--bar);display:grid;place-items:center;transform:scale(0);transition:transform .5s cubic-bezier(.3,1.6,.5,1)}
+.rcard.in .tick{transform:scale(1)}
+.rcard.in .body:nth-of-type(1) .tick{transition-delay:.7s}.rcard.in .body:nth-of-type(2) .tick{transition-delay:.9s}
+.rcard .tick svg{width:16px;height:16px;stroke:#fff}
+.rcard h3{font-size:1.4rem;line-height:1.15}
+.rcard p{margin:.2rem 0 0;color:var(--ink-2);font-size:1rem;line-height:1.45}
+.rcard .code{display:inline-block;margin-top:.5rem;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:1.05rem;background:var(--chip);padding:.15rem .6rem;border-radius:6px}
+@media (max-width:900px){.recog{grid-template-columns:1fr}}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+  .reveal{opacity:1;transform:none}
+  .cable .pulse,.scene .dash,.sld .flow{display:none}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <nav class="nav-bar" aria-label="Main">
+        <div class="nav-list">
+      <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span class="bar"></span></button>
+      <ul id="menu">
+        <li><a href="#top" data-after="Home">Home</a></li>
+        <li><a href="#network" data-after="Voltage">Voltage levels</a></li>
+        <li><a href="#now" data-after="Now">Current work</a></li>
+        <li><a href="#experience" data-after="Career">Experience</a></li>
+        <li><a href="#projects" data-after="Projects">Projects</a></li>
+        <li><a href="#certs" data-after="Approvals">Certifications</a></li>
+        <li><a href="#recognition" data-after="Assessed">Recognition</a></li>
+        <li><a href="#contact" data-after="Contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="progress" id="progress"></div>
+</header>
+
+<header class="hero" id="top">
+  <svg class="scene" id="scene" viewBox="0 0 1440 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#FFFFFF"/><stop offset=".62" stop-color="#EEF3F9"/><stop offset=".62" stop-color="#F7F9FB"/><stop offset="1" stop-color="#FFFFFF"/>
+      </linearGradient>
+      <radialGradient id="glow"><stop offset="0" stop-color="#FFB300" stop-opacity="1"/><stop offset=".3" stop-color="#FFC233" stop-opacity=".55"/><stop offset="1" stop-color="#FFC233" stop-opacity="0"/></radialGradient>
+      <linearGradient id="cone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFC233" stop-opacity=".55"/><stop offset="1" stop-color="#FFC233" stop-opacity="0"/></linearGradient>
+      <radialGradient id="pool"><stop offset="0" stop-color="#FFB300" stop-opacity=".45"/><stop offset="1" stop-color="#FFB300" stop-opacity="0"/></radialGradient>
+      <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".55"/><stop offset=".75" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+    </defs>
+    <rect width="1440" height="800" fill="url(#sky)"/>
+    <g id="stars"></g>
+    <g id="skyline" fill="#E2E8F0"></g>
+    <polygon id="road" fill="#E9EEF4"/>
+    <g id="roadlines"></g>
+    <g id="poles"></g>
+    <rect width="1440" height="800" fill="url(#shade)"/>
+  </svg>
+
+  <div class="wrap copy">
+    <h1 aria-label="Abdul Rehman"><span class="line l3" aria-hidden="true">Abdul Rehman<i></i></span></h1>
+    <p class="role">Electrical Engineer, Abu Dhabi</p>
+    <p class="lede">10+ years putting power into UAE roads, cities and substations, from 132 kV cable works to the last streetlight. I specialise in
+      <span class="rotor" aria-live="off"><span class="on">site supervision.</span><span>testing and commissioning.</span><span>MV/LV cable networks.</span><span>authority approvals.</span></span>
+    </p>
+    <div class="cta">
+      <button type="button" class="btn lamp js-email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Get in touch</button>
+      <a class="btn ghost" href="#projects">See 11 projects</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/abdul-rehman-rehan/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+  <div class="cable" aria-hidden="true">
+    <svg viewBox="0 0 1440 46" preserveAspectRatio="none">
+      <path class="core" stroke="#B3261E" d="M0 13 H1440"/><path class="core" stroke="#E0A100" d="M0 23 H1440"/><path class="core" stroke="#1F4FA3" d="M0 33 H1440"/>
+      <path class="pulse p1" stroke="#B3261E" d="M0 13 H1440"/><path class="pulse p2" stroke="#E0A100" d="M0 23 H1440"/><path class="pulse p3" stroke="#1F4FA3" d="M0 33 H1440"/>
+    </svg>
+  </div>
+</header>
+
+<div class="stats" id="stats">
+  <div class="wrap">
+    <div class="stat"><b data-to="10" data-suf="+">0</b><span>years in UAE power projects</span></div>
+    <div class="stat"><b data-to="11">0</b><span>projects for 6 clients</span></div>
+    <div class="stat"><b data-to="132" data-suf=" kV">0</b><span>DEWA cable testing approval</span></div>
+    <div class="stat"><b data-to="84" data-pre="~" data-suf=" km">0</b><span>MV cable under supervision</span></div>
+    <div class="stat"><b data-to="94" data-pre="~" data-suf=" km">0</b><span>LV cable under supervision</span></div>
+    <div class="stat"><b data-to="2000" data-pre="~">0</b><span>streetlight poles on site now</span></div>
+  </div>
+</div>
+
+<section class="block" id="network">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <h2>From 132 kV down to the streetlight</h2>
+      <p>Every voltage level I've installed, tested, commissioned or supervised, drawn as a single-line diagram. Watch it energise, then click a label to jump to that project.</p>
+    </div>
+    <div class="sld-box reveal">
+      <svg class="sld" id="sld" viewBox="0 0 900 300" role="img" aria-labelledby="sld-t">
+        <title id="sld-t">Single-line diagram: 132 kV and 33 kV incomers feed an 11 kV bus, then RMUs, 11/0.415 kV substations and a 0.415 kV bus supplying streetlighting and residential plots. Each element links to a project.</title>
+        <path class="c" d="M20 100 H172 M230 100 H330"/>
+        <path class="c" d="M20 220 H172 M230 220 H330"/>
+        <path class="bus" d="M330 70 V250"/>
+        <path class="c" d="M330 160 H400 M440 160 H522 M580 160 H670"/>
+        <path class="bus" d="M670 90 V240"/>
+        <path class="c" d="M670 110 H828 M670 210 H818"/>
+
+        <path class="live d1" pathLength="1" d="M20 100 H172 M230 100 H330"/>
+        <path class="live d1" pathLength="1" d="M20 220 H172 M230 220 H330"/>
+        <path class="livebus d2" pathLength="1" d="M330 70 V250"/>
+        <path class="live d3" pathLength="1" d="M330 160 H400 M440 160 H522"/>
+        <path class="live d4" pathLength="1" d="M580 160 H670"/>
+        <path class="livebus d5" pathLength="1" d="M670 90 V240"/>
+        <path class="live d6" pathLength="1" d="M670 110 H828 M670 210 H818"/>
+
+        <path class="flow" d="M20 100 H172 M230 100 H330"/>
+        <path class="flow" d="M20 220 H172 M230 220 H330"/>
+        <path class="flow" d="M330 160 H400 M440 160 H522 M580 160 H670"/>
+        <path class="flow" d="M670 110 H828 M670 210 H818"/>
+
+        <circle class="tx" cx="190" cy="100" r="18"/><circle class="sym" cx="212" cy="100" r="18"/>
+        <circle class="tx" cx="190" cy="220" r="18"/><circle class="sym" cx="212" cy="220" r="18"/>
+        <circle class="tx" cx="540" cy="160" r="18"/><circle class="sym" cx="562" cy="160" r="18"/>
+        <path class="sym" d="M400 160 L432 144"/>
+        <circle class="dot" cx="400" cy="160" r="3.5"/><circle class="dot" cx="440" cy="160" r="3.5"/>
+        <circle class="sym lampsym" cx="842" cy="110" r="13" style="fill:var(--surface)"/>
+        <path class="sym" d="M832.8 100.8 L851.2 119.2 M851.2 100.8 L832.8 119.2"/>
+        <path class="sym" d="M818 201 L838 210 L818 219 Z" style="fill:var(--ink)"/>
+
+        <text class="kv" x="20" y="86">132 kV</text>
+        <text class="kv" x="20" y="206">33 kV</text>
+        <text class="kv" x="330" y="280" text-anchor="middle">11 kV</text>
+        <text class="kv" x="670" y="270" text-anchor="middle">0.415 kV</text>
+
+        <a href="#p-dewa-sub"><text class="lnk" x="201" y="140" text-anchor="middle">DEWA 132/11 kV substation</text></a>
+        <a href="#p-dewa-cable"><text class="lnk sub" x="201" y="158" text-anchor="middle">+ 132 kV cable works, Dubai</text></a>
+        <a href="#p-imkan"><text class="lnk" x="201" y="260" text-anchor="middle">IMKAN 33/11 kV package unit</text></a>
+        <text class="sub" x="201" y="278" text-anchor="middle">substation, Al Jurf</text>
+        <a href="#p-mbz"><text class="lnk" x="420" y="196" text-anchor="middle">RMUs and switchgear</text></a>
+        <text class="sub" x="420" y="214" text-anchor="middle">ABB, Siemens, Lucy</text>
+        <a href="#p-aadc"><text class="lnk" x="551" y="116" text-anchor="middle">11/0.415 kV substations</text></a>
+        <text class="sub" x="551" y="134" text-anchor="middle">brick-built, AADC and MUSANADA</text>
+        <a href="#p-mafraq"><text class="lnk" x="752" y="78" text-anchor="middle">Streetlighting</text></a>
+        <text class="sub" x="752" y="96" text-anchor="middle">~2,000 poles, Mafraq</text>
+        <a href="#p-shakbout"><text class="lnk" x="745" y="240" text-anchor="middle">LV distribution</text></a>
+        <text class="sub" x="745" y="258" text-anchor="middle">354 plots, Shakbout City</text>
+      </svg>
+    </div>
+    <p class="note reveal">On a phone, swipe the diagram sideways to see all of it.</p>
+  </div>
+</section>
+
+<section class="block" id="now" style="background:var(--alt);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <h2>What I'm working on now</h2>
+      <p>On the Engineer's side of one of Abu Dhabi's largest industrial infrastructure programmes.</p>
+    </div>
+    <div class="feature">
+      <div class="reveal">
+        <span class="tag live">In progress since Nov 2025</span>
+        <h3>Mafraq Industrial City roads and infrastructure</h3>
+        <p class="who">Client: ALDAR. My role: Assistant Resident Engineer, Bilfinger Tebodin</p>
+        <p>I supervise the contractor's electrical works across the whole development: MV and LV cable networks, streetlighting and fibre optics. That means detailed technical reviews of material submittals and shop drawings, daily site supervision, and making sure what goes in the ground matches the contract.</p>
+        <p>Because the works tie into live networks, I coordinate directly with the authorities on site visits, shutdown arrangements and compliance, and keep daily narratives, weekly progress reports and responses to RFIs and letters moving.</p>
+        <div><span class="tag">Submittal review</span><span class="tag">Shop drawings</span><span class="tag">Shutdowns</span><span class="tag">RFIs and letters</span><span class="tag">ADM streetlighting standards</span></div>
+      </div>
+      <div class="qty reveal" id="qty">
+        <h4>Quantities under my supervision</h4>
+        <div class="bar"><div class="top"><span>MV cabling</span><b>~84 km</b></div><div class="track"><div class="fill r" style="--w:89%"></div></div></div>
+        <div class="bar"><div class="top"><span>LV cabling</span><b>~94 km</b></div><div class="track"><div class="fill y" style="--w:100%"></div></div></div>
+        <div class="bar"><div class="top"><span>Streetlight poles</span><b>~2,000</b></div>
+          <div class="poles" id="polegrid" aria-hidden="true"></div>
+          <p class="note" style="margin:.6rem 0 0;font-size:.9rem">Each dot is about 20 poles.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="experience">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <h2>Experience</h2>
+      <p>Six years on the contractor side building and commissioning networks, then the move to the consultant side supervising them.</p>
+    </div>
+    <div class="timeline" id="timeline">
+      <div class="rail"><i id="railfill"></i></div>
+
+      <article class="role reveal">
+        <div class="when">Jan 2024 to present</div>
+        <h3>Electrical Engineer (Assistant Resident Engineer)</h3>
+        <div class="org">Bilfinger Tebodin, Abu Dhabi</div>
+        <div class="groups">
+          <div class="group"><h4>Site supervision</h4><ul>
+            <li>Make sure works follow contract drawings, specifications and standards, safely and on schedule.</li>
+            <li>Schedule and run site inspections; attend progress meetings and final inspections.</li>
+            <li>Hold the contractor to every contract requirement and coordinate the tests that prove quality.</li></ul></div>
+          <div class="group"><h4>Reviews</h4><ul>
+            <li>Constructability reviews for upcoming contracts, with comments on drawings and specifications delivered by the set dates.</li>
+            <li>Technical review of material submittals and shop drawings.</li>
+            <li>Feasibility, data collection, cost estimates and tender documents for TAQA's ADMS/KCCC integration.</li></ul></div>
+          <div class="group"><h4>Records and reporting</h4><ul>
+            <li>Daily narratives, T&amp;M daily labour reports and controlled inspection reports.</li>
+            <li>Complete, accurate records of work done and quantities.</li>
+            <li>Keep the Resident Engineer informed of progress and problems.</li></ul></div>
+        </div>
+      </article>
+
+      <article class="role reveal">
+        <div class="when">Jun 2022 to Dec 2023</div>
+        <h3>Electrical Engineer</h3>
+        <div class="org">Hepton Electromechanical Contracting, Abu Dhabi</div>
+        <div class="groups">
+          <div class="group"><h4>Approvals</h4><ul>
+            <li>Coordinated with clients and authorities to secure approvals before work started.</li>
+            <li>Completed the ADMCC course and applied its surveillance standards on site.</li></ul></div>
+          <div class="group"><h4>Delivery and operations</h4><ul>
+            <li>Managed subcontractors so parallel works progressed together.</li>
+            <li>Operated and maintained private substations.</li></ul></div>
+        </div>
+      </article>
+
+      <article class="role reveal">
+        <div class="when">Oct 2016 to Mar 2022</div>
+        <h3>Electrical Engineer</h3>
+        <div class="org">Ghantoot Energy and Water, UAE</div>
+        <div class="groups">
+          <div class="group"><h4>Installation, testing and commissioning</h4><ul>
+            <li>RMUs, transformers, switchgear (ABB, Siemens, Lucy), package units and LV panels.</li>
+            <li>Substation works: small power, cable tray, earthing, testing and commissioning.</li>
+            <li>Supervised DEWA 132/11 kV substation installation and 132 kV cable laying and testing.</li>
+            <li>Assembly, maintenance and dismantling of panels and equipment for clients.</li></ul></div>
+          <div class="group"><h4>Site and quality</h4><ul>
+            <li>Supervised construction scope and site management, working from client electrical diagrams.</li>
+            <li>Material inspection and approval (RCDR/RFI) and method statements.</li>
+            <li>Prepared and revised layout drawings in AutoCAD and Revit to client requirements.</li>
+            <li>Kept health and safety the first priority on every activity.</li></ul></div>
+          <div class="group"><h4>Project controls</h4><ul>
+            <li>Scopes, execution plans, procurement strategy for critical items and budget input.</li>
+            <li>Progress tracking in MS Project, Primavera and Excel; daily, weekly and monthly reports.</li>
+            <li>Resource forecasting across regions; vendor coordination for on-time materials.</li>
+            <li>Led risk analysis and value engineering sessions and followed mitigations to closure.</li></ul></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="projects" style="background:var(--alt);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <h2>Eleven projects, six clients</h2>
+      <p>Filter by type of work, and open any card for the full scope.</p>
+    </div>
+    <div class="filters reveal" role="group" aria-label="Filter projects" id="filters"></div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<section class="block" id="certs">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <h2>Authority certifications</h2>
+      <p>Approved by the UAE utilities to test and terminate cables on their networks.</p>
+    </div>
+    <div class="certs">
+      <div class="volt reveal" id="volt">
+        <h3>Cable testing approvals</h3>
+        <p>Bar length shows the highest voltage I'm approved for.</p>
+        <div class="vrow"><div class="who">DEWA</div><div><div class="what">Cable testing (C51)</div><div class="vtrack"><div class="vfill b" style="--w:100%">132 kV</div></div></div></div>
+        <div class="vrow"><div class="who">ADDC</div><div><div class="what">Cable laying, jointing, termination and testing</div><div class="vtrack"><div class="vfill r" style="--w:25%">33 kV</div></div></div></div>
+        <div class="vrow"><div class="who">AADC</div><div><div class="what">Cable testing and commissioning</div><div class="vtrack"><div class="vfill y" style="--w:8.3%">11 kV</div></div></div></div>
+      </div>
+      <div class="others">
+        <div class="cert reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><div><h4>ADDC live LV panel connection</h4><p>Approved to connect to live LV panels.</p></div></div>
+        <div class="cert reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h4l-2 9H6L4 7h4"/><circle cx="12" cy="7" r="3"/><path d="M8 20h8"/></svg></div><div><h4>ADMCC Video Surveillance System Engineer</h4><p>Level 1 course.</p></div></div>
+        <div class="cert reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 8l9 5 9-5z"/><path d="M7 10.5V16c0 1.5 2.5 3 5 3s5-1.5 5-3v-5.5"/></svg></div><div><h4>ADQCC Assistant Engineer</h4><p>Abu Dhabi Quality and Conformity Council.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="recognition" style="background:var(--alt);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+  <div class="wrap">
+    <div class="head-row reveal">
+      <h2>Qualifications recognised abroad</h2>
+      <p>My qualifications and experience have been assessed by the official bodies in Canada, Australia and the UAE.</p>
+    </div>
+    <div class="recog">
+      <article class="rcard reveal" style="--bar:#B3261E">
+        <div class="country">Canada</div>
+        <div class="body"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><h3>WES</h3><p>World Education Services: educational credential assessment.</p></div></div>
+        <div class="body"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><h3>IQAS</h3><p>International Qualifications Assessment Service: qualifications assessed.</p></div></div>
+      </article>
+      <article class="rcard reveal" style="--bar:#1F4FA3">
+        <div class="country">Australia</div>
+        <div class="body"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><h3>Engineers Australia</h3><p>Qualifications and experience assessed as Electrical Engineer.</p><span class="code">ANZSCO 233311</span></div></div>
+      </article>
+      <article class="rcard reveal" style="--bar:#2E7D4F">
+        <div class="country">UAE</div>
+        <div class="body"><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><h3>MOHESR</h3><p>Ministry of Higher Education and Scientific Research: qualifications assessed.</p></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="skills">
+  <div class="wrap">
+    <div class="head-row reveal"><h2>Skills and education</h2></div>
+    <div class="skills">
+      <div class="skill reveal"><h3>On site</h3>
+        <span class="tag">Site supervision</span><span class="tag">Quality control</span><span class="tag">Testing and commissioning</span><span class="tag">LV/MV substations</span><span class="tag">Cable networks</span><span class="tag">Streetlighting</span><span class="tag">RMUs</span><span class="tag">Transformers</span><span class="tag">Switchgear</span><span class="tag">Package units</span><span class="tag">Earthing</span><span class="tag">Cable fault location</span><span class="tag">Load transfers</span></div>
+      <div class="skill reveal"><h3>Compliance and review</h3>
+        <span class="tag">TAQA / ADDC / AADC</span><span class="tag">DEWA</span><span class="tag">ADMCC</span><span class="tag">ADM streetlighting</span><span class="tag">Submittal review</span><span class="tag">Shop drawing review</span><span class="tag">RFI / RFS / CRS</span><span class="tag">Method statements</span><span class="tag">Civil defence and municipality approvals</span><span class="tag">HSE</span></div>
+      <div class="skill reveal"><h3>Project and software</h3>
+        <span class="tag">Primavera P6</span><span class="tag">MS Project</span><span class="tag">AutoCAD</span><span class="tag">Revit</span><span class="tag">Excel</span><span class="tag">MATLAB</span><span class="tag">MEP coordination</span><span class="tag">Risk analysis</span><span class="tag">Value engineering</span><span class="tag">Cost estimates</span><span class="tag">Tender documents</span><span class="tag">Resource forecasting</span></div>
+    </div>
+    <div class="edu">
+      <div class="skill reveal"><h3>Master of Project Management</h3><p>SZABIST, Dubai, UAE. 2020 to 2021</p></div>
+      <div class="skill reveal"><h3>Bachelor in Electrical Engineering</h3><p>Air University, Islamabad, Pakistan. 2012 to 2016</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="row" aria-hidden="true"><div class="pole"></div><div class="pole"></div><div class="pole"></div><div class="pole"></div><div class="pole"></div></div>
+    <h2>Let's switch on your next project</h2>
+    <p>I'm open to site supervision, testing and commissioning, and resident engineer roles, in the UAE or abroad.</p>
+    <div class="cta">
+      <button type="button" class="btn lamp js-email">Email me</button>
+      <a class="btn ghost" href="https://www.linkedin.com/in/abdul-rehman-rehan/" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+    <span class="mail">arehmanmohammad1@gmail.com</span>
+  </div>
+</section>
+
+<dialog id="mailbox" aria-labelledby="mb-title">
+  <form method="dialog" class="mb-close-row"><button class="mb-x" aria-label="Close">&times;</button></form>
+  <h2 id="mb-title">Email Abdul Rehman</h2>
+  <p>Copy my address, or open a new message straight away.</p>
+  <label for="mb-addr" class="mb-label">Email address</label>
+  <div class="mb-field"><input id="mb-addr" type="text" readonly value="arehmanmohammad1@gmail.com"><button type="button" class="btn lamp" id="mb-copy">Copy</button></div>
+  <p class="mb-status" id="mb-status" role="status"></p>
+  <div class="mb-actions">
+    <a class="btn ghost" id="mb-gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=arehmanmohammad1@gmail.com&amp;su=Opportunity%20for%20Abdul%20Rehman" target="_blank" rel="noopener">Write in Gmail</a>
+    <a class="btn ghost" id="mb-outlook" href="https://outlook.office.com/mail/deeplink/compose?to=arehmanmohammad1@gmail.com&amp;subject=Opportunity%20for%20Abdul%20Rehman" target="_blank" rel="noopener">Write in Outlook</a>
+    <a class="btn ghost" href="mailto:arehmanmohammad1@gmail.com?subject=Opportunity%20for%20Abdul%20Rehman" target="_blank" rel="noopener">Open mail app</a>
+  </div>
+</dialog>
+<footer><div class="wrap"><span>Abdul Rehman Mohammad Rehan, Electrical Engineer</span><span>Abu Dhabi, UAE</span></div></footer>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS='http://www.w3.org/2000/svg';
+  function el(tag,attrs,parent){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(parent)parent.appendChild(e);return e;}
+
+  /* ---------- hero night scene ---------- */
+  var VX=980,VY=496,H=800;
+  var stars=document.getElementById('stars');
+  var seed=7;function rnd(){seed=(seed*9301+49297)%233280;return seed/233280;}
+  
+  var sk=document.getElementById('skyline');var x=0;
+  while(x<1440){var w=20+rnd()*60,h=8+rnd()*34;if(Math.abs(x-VX)<40){x+=w;continue;}el('rect',{x:x.toFixed(0),y:(VY-h).toFixed(0),width:w.toFixed(0),height:h.toFixed(0)},sk);x+=w+rnd()*30;}
+  // distant transmission tower
+  var tw=el('g',{stroke:'#B8C4D3','stroke-width':'2',fill:'none'},sk);
+  el('path',{d:'M300 496 L318 400 L336 496 M306 466 L330 466 M310 440 L326 440 M296 412 L340 412 M302 424 L334 424'},tw);
+  el('path',{d:'M1240 496 L1255 414 L1270 496 M1245 470 L1265 470 M1236 426 L1274 426'},tw);
+  el('path',{d:'M318 412 Q780 445 1255 426',stroke:'#B8C4D3','stroke-width':'1.2'},sk);
+  document.getElementById('road').setAttribute('points',[VX-6,VY,VX+6,VY,VX+900,H,VX-900,H].join(' '));
+  var rl=document.getElementById('roadlines');
+  el('path',{d:'M'+VX+' '+VY+' L'+(VX)+' '+H,stroke:'#9AA9BB','stroke-width':'4','stroke-dasharray':'26 46',class:'dash'},rl);
+  el('path',{d:'M'+(VX-4)+' '+VY+' L'+(VX-880)+' '+H,stroke:'#C3CDD9','stroke-width':'2'},rl);
+  el('path',{d:'M'+(VX+4)+' '+VY+' L'+(VX+880)+' '+H,stroke:'#C3CDD9','stroke-width':'2'},rl);
+  var poles=document.getElementById('poles');
+  var depths=[.08,.12,.17,.23,.31,.41,.54,.7,.9,1.15];
+  var order=0;
+  depths.forEach(function(d,i){
+    [-1,1].forEach(function(side){
+      var bx=VX+side*1000*d, by=VY+(H-VY)*d, h=420*d;
+      if(bx<-100||bx>1540)return;
+      var ax=bx-side*70*d, ay=by-h+6*d;
+      var delay=(reduce?0:(.9+order*.16)).toFixed(2)+'s';order++;
+      var g=el('g',{},poles);
+      el('ellipse',{cx:ax,cy:Math.min(by+6*d,H),rx:150*d,ry:34*d,fill:'url(#pool)',class:'pool',style:'animation-delay:'+delay},g);
+      el('polygon',{points:[ax-6*d,ay+6*d,ax+6*d,ay+6*d,ax+110*d,by+6*d,ax-110*d,by+6*d].join(' '),fill:'url(#cone)',class:'cone',style:'animation-delay:'+delay},g);
+      el('line',{x1:bx,y1:by,x2:bx,y2:by-h,stroke:'#0F1C2E','stroke-width':Math.max(1,6*d),'stroke-linecap':'round'},g);
+      el('path',{d:'M'+bx+' '+(by-h)+' Q'+((bx+ax)/2)+' '+(by-h-14*d)+' '+ax+' '+ay,stroke:'#0F1C2E','stroke-width':Math.max(1,4*d),fill:'none'},g);
+      el('circle',{cx:ax,cy:ay+4*d,r:90*d,fill:'url(#glow)',class:'lampglow',style:'animation-delay:'+delay},g);
+      el('ellipse',{cx:ax,cy:ay+3*d,rx:14*d,ry:5*d,fill:'#FFB300',stroke:'#0F1C2E','stroke-width':Math.max(.6,1.5*d),class:'head',style:'animation-delay:'+delay},g);
+    });
+  });
+  var scene=document.getElementById('scene');
+  requestAnimationFrame(function(){scene.classList.add('lit');});
+
+  /* rotating specialisms */
+  var rot=document.querySelectorAll('.rotor span'),ri=0;
+  if(!reduce){setInterval(function(){rot[ri].classList.remove('on');ri=(ri+1)%rot.length;rot[ri].classList.add('on');},2600);}
+
+  /* ---------- projects ---------- */
+  var P=[
+    {id:'p-mafraq',c:'ALDAR',d:'Nov 2025 to present',t:'Development and upgrading of roads and infrastructure',l:'Mafraq Industrial City, Abu Dhabi',f:['~84 km MV','~94 km LV','~2,000 poles'],k:['consult','cable','light'],side:'Bilfinger Tebodin, Engineer\'s side',s:['Detailed technical review of material submittals, shop drawings and other submissions.','Site supervision and coordination of MV and LV cables, streetlighting and fibre optic works.','Daily narratives, weekly progress reports, and responses to RFIs and letters.','Authority coordination for site visits, shutdown arrangements and compliance.']},
+    {id:'p-taqa',c:'TAQA',d:'Dec 2024 to Nov 2025',t:'Integration of distribution substations to ADMS and KCCC',l:'Eastern Region, Abu Dhabi',f:['Feasibility','Tender docs'],k:['consult','sub'],side:'Bilfinger Tebodin, consultant',s:['Studies and engineering investigations needed to implement the services.','Site investigation, data collection and surveys to define requirements and propose options.','Budget cost estimates for the works.','Tender documents to current ADDC standards, following ADDC\'s procurement method.']},
+    {id:'p-imkan',c:'IMKAN',d:'Jan to Dec 2024',t:'33/11 kV permanent package unit substation',l:'Al Jurf',f:['33/11 kV'],k:['consult','sub'],side:'Bilfinger Tebodin, consultant',s:['Reviewed all contractor documentation for the project.','Coordinated with authorities on approvals.','Supervised site conditions to make sure standards and codes were followed.']},
+    {id:'p-dewa-cable',c:'DEWA',d:'Dec 2021 to Mar 2022',t:'132 kV cable works: supply, installation, testing and commissioning',l:'Dubai',f:['132 kV','C51 testing'],k:['cable'],side:'Ghantoot, contractor',s:['132 kV cable laying.','132 kV cable testing under DEWA C51 approval.','132/11 kV substation-related works, including cable supports.']},
+    {id:'p-alyeef',c:'MUSANADA',d:'Jan to Dec 2021',t:'Roads and infrastructure for residential plots',l:'Alyeef and Liwa City',f:['700 poles','13 substations'],k:['light','sub','cable'],side:'Ghantoot, contractor',s:['Installed 700 streetlight poles.','Built 13 brick-built substations.','LV and MV cable laying.','Installed new feeder pillars, service turrets and control cabinets.']},
+    {id:'p-dewa-sub',c:'DEWA',d:'Apr 2020 to Jan 2021',t:'132/11 kV substation: supply, installation, testing and commissioning',l:'Dubai',f:['132/11 kV'],k:['sub'],side:'Ghantoot, contractor',s:['Installation of 132 kV, 11 kV and LV panels, plus power and earthing transformers.','Internal and external earthing, including lightning protection.','Cable tray for power and control cables.','Small power: piping, wiring, DB panels, lights, sockets and switches.']},
+    {id:'p-shakbout',c:'MUSANADA',d:'Feb 2019 to Mar 2020',t:'Internal roads and infrastructure, 354 residential plots',l:'Shakbout City, Abu Dhabi',f:['354 plots','11 kV T&C'],k:['cable','sub','light'],side:'Ghantoot, contractor',s:['Installed, tested and commissioned 11 kV cables, and commissioned new substations.','Relocated live MV and LV cables to clear a new substation plot, then laid new feeders with feeder pillars, service turrets and a control cabinet.','Supervised substation MEP works including GI and firefighting; prepared technical documents, samples and mock-ups for approval.','Installed 10 m streetlight poles and managed piling and casting of their foundations.','Reviewed shop drawings before submission to the consultant and ADDC; followed up submittals, RFS and CRS.']},
+    {id:'p-east25',c:'MUSANADA',d:'Sep 2018 to Mar 2019',t:'Internal roads and infrastructure, Sector East 25 Phase 2',l:'Abu Dhabi',f:['11 kV T&C'],k:['cable','sub'],side:'Ghantoot, contractor',s:['Equipment installation and assembly.','Installation, testing and commissioning of 11 kV cables.','Substation works: cable tray, lighting, outlets, DBs and equipment earthing.','Exposed and embedded conduit, wiring, and normal, emergency and exit lighting with photocells.']},
+    {id:'p-shawamekh',c:'MUSANADA',d:'Jun 2018 to Feb 2019',t:'Internal roads and infrastructure, Sectors 12 and 7',l:'Al Shawamekh, Abu Dhabi',f:['11 kV T&C','Fault location'],k:['cable','sub'],side:'Ghantoot, contractor',s:['Installation, testing and commissioning of 11 kV cables, including pinpointing cable faults.','Substation works and lighting installation.','Ran day-to-day site installation and solved problems as they came up, keeping work to plan, shop drawings and schedule.','Daily progress reporting to the consultant.','Completion certificates and approvals from civil defence and the municipality.']},
+    {id:'p-mbz',c:'MUSANADA',d:'Feb to Jul 2018',t:'Internal roads and infrastructure ME03 to ME07, Contract H1',l:'MBZ City, Abu Dhabi',f:['11 kV RMUs','Energisation'],k:['sub','cable'],side:'Ghantoot, contractor',s:['11 kV ring main substations and MV/LV cable works.','Package unit installation and energisation.','Feeder pillars and service turrets.','MV/LV load transfers.']},
+    {id:'p-aadc',c:'AADC',d:'Jan 2017 to Feb 2018',t:'New 11/0.415 kV brick-built substations A-11773 and A-11775',l:'Abu Dhabi',f:['2 substations','11/0.415 kV'],k:['sub'],side:'Ghantoot, contractor',s:['Equipment installation with checklists and inspections.','Cables inside the substations and outgoing feeders.','Substation earthing networks.','Approved AADC cable testing and commissioning engineer.']}
+  ];
+  var F=[['all','All'],['sub','Substations'],['cable','Cable networks'],['light','Streetlighting'],['consult','Consultant side']];
+  var grid=document.getElementById('grid'),fl=document.getElementById('filters');
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+  P.forEach(function(p){
+    var a=document.createElement('article');a.className='card reveal';a.id=p.id;a.dataset.k=p.k.join(' ');
+    a.innerHTML='<div class="meta"><span class="client c-'+p.c+'">'+p.c+'</span><span class="dates">'+p.d+'</span></div>'+
+      '<h3>'+esc(p.t)+'</h3><div class="loc">'+esc(p.l)+'</div>'+
+      '<div class="figs">'+p.f.map(function(x){return '<span>'+esc(x)+'</span>';}).join('')+'</div>'+
+      '<div class="side">'+esc(p.side)+'</div>'+
+      '<details><summary>Full scope</summary><ul>'+p.s.map(function(x){return '<li>'+esc(x)+'</li>';}).join('')+'</ul></details>';
+    grid.appendChild(a);
+  });
+  F.forEach(function(f,i){
+    var n=f[0]==='all'?P.length:P.filter(function(p){return p.k.indexOf(f[0])>-1;}).length;
+    var b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',i===0?'true':'false');
+    b.innerHTML=f[1]+'<span>'+n+'</span>';
+    b.addEventListener('click',function(){
+      fl.querySelectorAll('button').forEach(function(x){x.setAttribute('aria-pressed','false');});
+      b.setAttribute('aria-pressed','true');
+      grid.querySelectorAll('.card').forEach(function(c,j){
+        var show=f[0]==='all'||c.dataset.k.split(' ').indexOf(f[0])>-1;
+        c.classList.toggle('hide',!show);
+        if(show&&!reduce){c.classList.remove('in');c.style.transitionDelay=(j%6*.05)+'s';requestAnimationFrame(function(){requestAnimationFrame(function(){c.classList.add('in');});});}
+      });
+    });
+    fl.appendChild(b);
+  });
+  // SLD links: reset filter, open and flash the card
+  document.querySelectorAll('.sld a').forEach(function(a){
+    a.addEventListener('click',function(){
+      var id=a.getAttribute('href').slice(1),card=document.getElementById(id);
+      fl.querySelector('button').click();
+      if(card){var d=card.querySelector('details');if(d)d.open=true;card.classList.remove('flash');void card.offsetWidth;card.classList.add('flash');}
+    });
+  });
+
+  /* ---------- pole dots ---------- */
+  var pg=document.getElementById('polegrid');
+  for(var i=0;i<100;i++){pg.appendChild(document.createElement('i'));}
+
+  /* ---------- observers ---------- */
+  function count(b){
+    var to=+b.dataset.to,pre=b.dataset.pre||'',suf=b.dataset.suf||'';
+    function fmt(v){return pre+(to>=1000?Math.round(v).toLocaleString('en-US'):Math.round(v))+suf;}
+    if(reduce){b.textContent=fmt(to);return;}
+    var t0=null,dur=1600;
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/dur);b.textContent=fmt(to*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  }
+  function lightPoles(){
+    var dots=pg.querySelectorAll('i');
+    dots.forEach(function(d,i){if(reduce){d.classList.add('on');}else{setTimeout(function(){d.classList.add('on');},400+i*18);}});
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting)return;
+      var t=e.target;t.classList.add('in');
+      if(t.id==='stats'){t.querySelectorAll('b[data-to]').forEach(count);}
+      if(t.id==='qty'){lightPoles();}
+      if(t.classList.contains('sld-box')){document.getElementById('sld').classList.add('on');}
+      io.unobserve(t);
+    });
+  },{threshold:.18,rootMargin:'0px 0px -6% 0px'});
+  document.querySelectorAll('.reveal,#stats,#volt,#contact,.role').forEach(function(n){io.observe(n);});
+
+
+  /* ---------- email dialog ---------- */
+  var mb=document.getElementById('mailbox'),addr=document.getElementById('mb-addr'),st=document.getElementById('mb-status');
+  function openMail(){
+    st.textContent='';
+    if(mb.showModal){try{mb.showModal();}catch(e){mb.setAttribute('open','');}}else{mb.setAttribute('open','');}
+    addr.focus();addr.select();
+  }
+  document.querySelectorAll('.js-email').forEach(function(b){b.addEventListener('click',openMail);});
+  mb.addEventListener('click',function(e){if(e.target===mb){mb.close?mb.close():mb.removeAttribute('open');}});
+  document.getElementById('mb-copy').addEventListener('click',function(){
+    var v=addr.value;
+    function fallback(){
+      addr.focus();addr.select();addr.setSelectionRange(0,v.length);
+      var ok=false;try{ok=document.execCommand('copy');}catch(e){}
+      st.textContent=ok?'Copied to your clipboard.':'Address selected. Press Ctrl+C (or Cmd+C) to copy.';
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(v).then(function(){st.textContent='Copied to your clipboard.';},fallback);
+    }else{fallback();}
+  });
+
+  /* ---------- header: hamburger, colour on scroll, active link ---------- */
+  var header=document.getElementById('header'),ham=document.querySelector('.hamburger'),menu=document.getElementById('menu'),links=[].slice.call(menu.querySelectorAll('a'));
+  function setMenu(open){ham.classList.toggle('active',open);menu.classList.toggle('active',open);ham.setAttribute('aria-expanded',open?'true':'false');ham.setAttribute('aria-label',open?'Close menu':'Open menu');document.body.style.overflow=(open&&innerWidth<1100)?'hidden':'';}
+  ham.addEventListener('click',function(){setMenu(!menu.classList.contains('active'));});
+  links.forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('active'))setMenu(false);});
+  var prog=document.getElementById('progress'),tl=document.getElementById('timeline'),rf=document.getElementById('railfill');
+  function onScroll(){
+    var y=window.scrollY,h=document.documentElement.scrollHeight-innerHeight;
+    header.classList.toggle('scrolled',y>250);
+    prog.style.transform='scaleX('+(h>0?y/h:0)+')';
+    var r=tl.getBoundingClientRect(),p=(innerHeight*.6-r.top)/r.height;
+    rf.style.transform='scaleY('+Math.max(0,Math.min(1,p))+')';
+    var cur=null;links.forEach(function(a){var t=document.querySelector(a.getAttribute('href'));if(t&&t.getBoundingClientRect().top<=130)cur=a;});
+    links.forEach(function(a){a.classList.toggle('current',a===cur);});
+  }
+  addEventListener('scroll',onScroll,{passive:true});addEventListener('resize',onScroll);onScroll();
+})();
+</script>
+</body>
+</html>
